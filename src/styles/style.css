@@ -1,0 +1,610 @@
+:root {
+    --primaryColor: #ec5b53;
+    --secondaryColor: #002d5b;
+    --muteColor: #eeeeee;
+    --lightColor: #fdf5f5;
+    --overlay: #35373a;
+    --textColor: #444;
+    --whiteColor: #fff
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+/* Start Components */
+.btnComponent {
+    border-radius: 0.4rem;
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
+    padding: 1.2rem 1.6rem;
+    border: none;
+}
+.textBoxComponent > h2 {
+    font-size: 2rem;
+    color: var(--secondaryColor);
+}
+.textBoxComponent > p {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+.textBoxComponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 2rem;
+}
+.lineComponent {
+    background-color: var(--primaryColor);
+    width: 5rem;
+    height: 0.2rem;
+}
+.cardComponent {
+    background-color: var(--whiteColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.5rem;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    box-shadow: 0 0 45px 0 rgba(0, 0, 0, 0.07);
+  }
+  .cardComponent > p {
+    font-size: 1.6rem;
+    color: var(--textColor);
+    margin-bottom: 2rem;
+  }
+  .cardComponent > h3 {
+    font-size: 2rem;
+  }
+/* End Components */
+
+.sectionWrapper {
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Start Header Styles */
+#header {
+  background-color: var(--lightColor);
+}
+#header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 2rem; */
+}
+.headerNav {
+    display: none;
+}
+.headerNav a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--secondaryColor);
+}
+.headerBtn {
+    display: none;
+}
+.headerIcon {
+    width: 6rem;
+    height: 6rem;
+}
+.menuIcon {
+    font-size: 2.4rem;
+    color: var(--primaryColor);
+    transition: all 0.1s ease-in-out;
+}
+.closeIcon {
+  font-size: 2.4rem;
+  color: var(--primaryColor);
+  transition: all 0.1s ease-in-out;
+  display: none;
+}
+#hamburger {
+  display: none;
+}
+
+#hamburger:checked + label .menuIcon  {
+  display: none;
+}
+#hamburger:checked + label .closeIcon {
+  display: block;
+}
+#hamburger:checked + label + .headerNav {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 8rem;
+  padding: 7rem 1.5rem;
+  top: 11rem;
+  left: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  background-color: var(--whiteColor);
+  gap: 0.7rem;
+}
+/* End Header Styles */
+
+/* Start Me Section Styles */
+#meSection {
+    background-color: var(--lightColor);
+}
+.meSectionTextBox {
+    text-align: center;
+}
+.meNav {
+    display: none;
+}
+.meHeading {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondaryColor);
+}
+.meDescription {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+
+}
+.meSectionImage {
+    max-width: 100%;
+    aspect-ratio: auto 645 / 925;
+}
+/* End Me Section Styles */
+
+/* Start About Section Styles */
+#aboutSection {
+    padding: 2rem;
+    background-color: var(--whiteColor);
+}
+.aboutTextBox {
+    margin-bottom: 1.5rem;
+}
+.aboutHeading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--secondaryColor);
+}
+.aboutFirstContent {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+.aboutFirstContent > p:first-child {
+    margin-bottom: 1.5rem;
+}
+.aboutSecondContent {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+.aboutSecondContent > p:first-child {
+    margin-bottom: 1.5rem;
+}
+.aboutBtn {
+    margin-bottom: 2rem;
+}
+.aboutImageContainer {
+    padding: 1.5rem;
+}
+.aboutImageWrapper {
+    width: 100%;
+    /* height: 40rem; */
+    aspect-ratio: auto 640 / 900;
+    background-color: var(--primaryColor);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1.5rem;
+    position: relative;
+}
+.aboutImage {
+    width: 100%;
+    /* height: 36rem; */
+    aspect-ratio: auto 640 / 814;
+    border-radius: 1rem;
+    position: absolute;
+    left: -2rem;
+    /* top: 2rem; */
+    top: 50%;
+    transform: translateY(-50%);
+    /* top: 5%; */
+}
+/* End About Section Styles */
+
+/* Start Services Section Styles */
+#servicesSection {
+    background-color: var(--lightColor);
+}
+.servicesCardWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.servicesTextBox {
+    margin-bottom: 2rem;
+}
+.servicesCardWrapper .cardComponent img {
+    width: 6rem;
+    height: 6rem;
+}
+.servicesIcon {
+    font-size: 3rem;
+    color: var(--textColor);
+}
+/* End Services Section Styles */
+
+/* Start Work Section style */
+#workingProcessSection {
+    color: var(--whiteColor);
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  .overlay {
+    background-color: var(--overlay);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.6;
+    z-index: 10;
+  }
+  .workBgImage {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../assets/images/web-developer-bg-min.jpg");
+  }
+  .workTextBox {
+    z-index: 20;
+    padding: 1rem;
+  }
+  .workIcon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  .workHeading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .workDescription {
+    font-size: 1.6rem;
+  }
+  /* End Work Section style */
+
+
+  /* Start Work Experience Section style */
+  #workExperienceSection {
+    background-color: var(--lightColor);
+    padding: 1rem 2.5rem;
+  }
+  .experienceList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .experienceCard {
+    text-align: left;
+    align-items: start;
+    padding: 2rem;
+  }
+  .experienceCard > time {
+    font-size: 1.6rem;
+    color: var(--primaryColor);
+  }
+  .progressWrapper {
+    width: 100%;
+    height: 2rem;
+    background-color: var(--muteColor);
+    border-radius: 10rem;
+    overflow: hidden;
+  }
+  .progress {
+    height: 100%;
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1rem;
+  }
+  .progressLabel {
+    margin: 0;
+    color: var(--whiteColor);
+    font-size: 1.2rem;
+  }
+  /* End Work Experience Section style */
+
+  /* Start Portfolio Section style */
+  #myPortfolioSection {
+    background-color: var(--lightColor);
+    padding: 2.5rem;
+  }
+  .portfolioImagesWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .portfolioImagesWrapper > img {
+    width: 100%;
+    border-radius: 1rem;
+    display: none;
+  }
+  .portfolioImagesWrapper > img:first-child {
+    display: block;
+  }
+  /* End Portfolio Section style */
+
+  /* Start Clients Section style */
+  #myClientsSection {
+    background-color: var(--lightColor);
+    padding: 2.5rem;
+  }
+  .clientsCardsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .clientsCard {
+    text-align: center;
+    padding: 2rem;
+  } 
+  .clientsCard img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50rem;
+    border: var(--primaryColor) 0.3rem solid;
+  }
+  .clientsLabel {
+    padding: 0.7rem 0rem;
+    font-size: 1.6rem;
+  }
+  .clientsIcon {
+    font-size: 2rem;
+    color: var(--primaryColor);
+  }
+  /* End Clients Section style */
+
+  /* Start InTouch Section style */
+  #inTouchSection {
+    background-color: var(--whiteColor);
+    padding: 2.5;
+  }
+  .inTouchForm {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .inTouchForm input {
+    padding: 1rem;
+    width: 60%;
+    height: 5rem;
+    font-size: 1.6rem;
+    border: var(--muteColor) 0.2rem solid;
+  }
+  /* End InTouch Section style */  
+
+  /* Start Footer style */
+  #footer {
+    background-color: var(--secondaryColor);
+    padding: 2rem;
+    text-align: center;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+  .footer img {
+    width: 10rem;
+    height: 10rem;
+  }  
+  .footer a {
+    color: var(--whiteColor);
+    font-size: 2.5rem;
+    text-decoration: none;
+  }  
+  #footer strong {
+    color: var(--whiteColor);
+    font-size: 1.2rem;
+  }
+  .footerNav {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } 
+  .footerIcon{
+    font-size: 2rem;
+    color: var(--whiteColor);
+    padding: 0rem 1rem;
+    text-decoration: none;
+    /* border: red 2rem solid; */
+  }
+  /* End Footer style */
+
+  /* Media Queries */
+  @media screen and (min-width: 768px) {
+    /* Start Me Section Styles */
+  .meSectionTextBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    text-align: start;
+  }
+
+  #meSection > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* .sectionWrapper {
+    margin: 0rem 2rem;  
+  } */
+  /* End Me Section Styles */
+
+  /* Start About Section Styles */
+  .secondContentWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+  .aboutImageContainer {
+    width: 80%;
+  }
+  /* End About Section Styles */
+
+  /* Start Services Section Styles */
+  .servicesCardWrapper {
+    flex-direction: row;
+  }
+/* End Services Section Styles */
+
+ /* Start Work Experience Section style */
+.firstExperienceWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.secondExperienceWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+/* End Work Experience Section style */
+
+/* Start My Portfolio Section style */
+.portfolioImagesWrapper img{
+  width: 50%;
+}
+/* End My Portfolio Section style */
+
+/* Start My Clients Section style */
+.clientsCardsWrapper {
+  flex-direction: row;
+}
+/* End My Clients Section style */
+}
+
+@media screen and (min-width: 922px) {
+
+  /* Start Header style */
+
+  .hamburgerLabel {
+    display: none;
+  }
+  .menuIcon {
+    display: none;
+  }
+  .headerNav {
+    display: block;
+  }  
+  .headerNav a {
+    font-size: 2rem;
+    padding: 1rem;
+    color: var(--textColor);
+  }
+  .headerBtn {
+    display: block;
+  }
+  /* End Header style */
+
+  /* Start Footer style */
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  /* End Footer style */
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .sectionWrapper {
+    max-width: 1175px;
+    margin: auto;
+  }
+
+  /* Start Me Section style */
+  .meSectionTextBox {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .meNav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .meNav a {
+    font-size: 2rem;
+    color: var(--secondaryColor);
+    padding: 0rem 1rem;
+    text-decoration: none;
+  }
+  /* End Me Section style */
+
+  /* Start About Section Style */
+  .aboutContentWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem
+  }
+  .firstContentWrapper {
+    width: 33%;
+  }
+  /* End About Section Style */
+  
+  /* Start My Portfolio Section style */
+  .portfolioImagesWrapper img{
+    width: 33%;
+  }
+  /* End  My Portfolio Sectionstyle */
+
+}
+
+

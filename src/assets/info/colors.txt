@@ -1,0 +1,6 @@
+primaryColor:#ec5b53
+secondaryColor:#002d5b
+muteColor:#eeeeee
+lightColor:#fefefe
+overlay:#35373a
+textColor:#333333
